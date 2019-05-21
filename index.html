@@ -19,5 +19,48 @@
     <p>This is my web page</p> 
   
   </body> 
+  <body>
+    <%
+       package partsmyshed;
 
+import javax.swing.JOptionPane;
+
+public class cementCalculator {
+
+	//main method
+	
+	public static void main(String[] args) {
+		
+			JOptionPane.showMessageDialog(null, "Click to calculate number of cement bags needed.");
+			String num1 = JOptionPane.showInputDialog("Enter Length in Feet");
+			String num2 = JOptionPane.showInputDialog("Enter Width in Feet");
+			String num3 = JOptionPane.showInputDialog("Enter Depth in Inches");
+			String weight = JOptionPane.showInputDialog("Enter weight of cement bags");
+		
+	
+			double Length = Double.parseDouble(num1);
+			double Width = Double.parseDouble(num2);
+			double Depth = Double.parseDouble(num3);
+			double bag_weight = Double.parseDouble(weight);
+	
+			double volume_ft3 = Depth * Length * Width / 12;
+			double bag_volume = bag_weight / 20 * .15;
+			double number_of_bags = Math.round(volume_ft3 / bag_volume + 1);
+	
+			JOptionPane.showMessageDialog(null, "The volume is " + volume_ft3 + " ft^3 and the number of " + weight + " pound bags is " + number_of_bags + ".", "the title", JOptionPane.PLAIN_MESSAGE);
+	
+	//create text entry fields for jbox
+	
+	//create calculate button
+	
+	// create output text box for results
+	
+	// create title
+	
+	// create output field
+       
+	}
+}
+  %>
+      </body>
 </html> 
