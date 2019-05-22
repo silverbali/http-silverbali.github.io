@@ -22,9 +22,7 @@
 		   
 		   var volumeFt3 = depthCement * widthCement * lengthCement / 12;
 		   var bagCoverage = bagWeight / 20 * .15;
-		   var numberBags = volumeFt3 / bagCoverage + 1
-		   
-		   alert('Number of bags required is ' + numberBags + ' ' + bagWeight ' pound bags');
+		   var numberBags = volumeFt3 / bagCoverage + 1;
 		  			  
 		  }
 	  
@@ -71,6 +69,7 @@ This calculator helps estimate the number of bags of cement needed to build a 4 
 		  <br>
 		  <button onclick = "fn1()" id = "btn3">Click</button>
 <br> 
+		  console.log('Number of bags required is ' + numberBags + ' ' + bagWeight ' pound bags');
 		  
 For questions, or to offer suggestions please email -----
 
