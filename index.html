@@ -29,7 +29,9 @@ Enter depth in inches<br>
 
 This calculator helps estimate the number of bags of cement needed to build a 4 to 6 inch cement foundation for varying sizes of sheds.<br>
 
-		Enter length in feet
+		<script type = "text/javascript">
+		  
+		  Enter length in feet
 		  <input id="lengthCement" placeholder = "Enter length">
 		  <br>
 		  
@@ -48,7 +50,9 @@ This calculator helps estimate the number of bags of cement needed to build a 4 
 		  <input id="bagWeight" placeholder = "Enter weight">
 		  <br>
 		  <button onclick = "fn1()" id = "btn1">Click Me</button> 
-		  
+		  </script>
+		  <br>
+		  <br>
 For questions, or to offer suggestions please email -----
 
 	  </p>
@@ -57,17 +61,18 @@ For questions, or to offer suggestions please email -----
 	<script type = "text/javascript">
 	function f1(){
 			
-			let lengthCement = document.getElementById("lengthCement").value;
-		  	let widthCement = document.getElementById("widthCement").value;
-		   	let depthCement = document.getElementById("widthCement").value;
-		   	let bagWeight = document.getElementById("bagWeight").value;
+			var lengthCement = document.getElementById("lengthCement").value;
+		  	var widthCement = document.getElementById("widthCement").value;
+		   	var depthCement = document.getElementById("widthCement").value;
+		   	var bagWeight = document.getElementById("bagWeight").value;
 		
-			let volumeFt3 = depthCement * widthCement * lengthCement / 12;
-		   	let bagCoverage = bagWeight / 20 * .15;
-		   	let numberBags = volumeFt3 / bagCoverage + 1;
-			
+			var volumeFt3 = depthCement * widthCement * lengthCement / 12;
+		   	var bagCoverage = bagWeight / 20 * .15;
+		   	var numberBags = volumeFt3 / bagCoverage + 1;
+					
 			alert('Number of bags required is ' + numberBags + ' ' + bagWeight ' pound bags');
 		}
+		
 	</script>
 	
 </html> 
