@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC> <html lang="en"> 
+  
+  <head> 
+    
+    <meta http-equiv="content-type" content="text/html;
+      
+      charset=utf-8"> 
+      
+    <title>
+      
+      PartsMyShed
+    
+    </title>
+	  		  
+  </head> 
+  
+  <body style = "border:10px; border-style:solid; border-color:Green; padding: 1em; background: url(https://images.freeimages.com/images/large-previews/bb2/forest-house-1575082.jpg); background-size: 90%; background-position: center; no-repeat;">
+ 
+	  <p style="border:3px; border-style:solid; border-color:Red; padding: 1em;">
+		  Warning: This website is in the experimental phase.
+		  <br>
+	  </p>
+	  <br>
+	  <p>
+		  
+	  The purpose of this website is to provide a calculator for shed parts to help with cost of materials estimates, and to provide useful links for shed building and the purchase of materials.<br>  
+		  Please enjoy the links while this website is being developed.  Also enjoy these gravel and cement foundation calculators.<br>
+
+This calculator helps estimate the cubic yards of gravel needed <br>
+		  to build a 4 to 6 inch gravel foundation for varying sizes of sheds.<br>
+
+		  <h1>Calculate Cubic Yards of Gravel</h1>
+	
+		  
+		  Enter length in feet
+		  lengthGravel <input type="number" id= "lengthGravel">
+		  <br>
+		  <br>
+		  
+		  Enter width in feet
+		  widthGravel <input type="number" id= "widthGravel">
+		  <br>
+		  <br>
+		
+	 Enter depth in inches
+		  depthGravel <input type="number" id= "depthGravel">
+		  <br>
+		  <br>
+		  
+		 
+	<button onclick = "f2()">Calculate</button>
+	  
+	    <h1 id = "answer2"></h1>
+
+
+This calculator helps estimate the number of bags of cement needed <br> 
+	  to build a 4 to 6 inch cement foundation for varying sizes of sheds.<br>
+
+
+		<h1>Calculate Bags of Cement</h1>
+	
+		  
+		  Enter length in feet
+		  lengthCement <input type="number" id= "lengthCement">
+		  <br>
+		  <br>
+		  
+		  Enter width in feet
+		  widthCement <input type="number" id= "widthCement">
+		  <br>
+		  <br>
+		
+	 Enter depth in inches
+		  depthCement <input type="number" id= "depthCement">
+		  <br>
+		  <br>
+		  
+		 
+		  Enter bag weight in pounds
+		  bagWeight <input type="number" id= "bagWeight">
+		  <br>
+		  <br>
+	  <button onclick = "f1()">Calculate</button>
+	  
+	    <h1 id = "answer1"></h1>
+	  
+	  
+		  
+For questions, or to offer suggestions please email -----
+
+	  </p>
+	  
+	  		 
+      </body>
+	
+	
+	<script type = "text/javascript">
+	function f1(){
+			
+			var lengthCement = document.getElementById("lengthCement").value;
+		  	var widthCement = document.getElementById("widthCement").value;
+		   	var depthCement = document.getElementById("depthCement").value;
+		   	var bagWeight = document.getElementById("bagWeight").value;
+		
+			var volumeFt3 = parseFloat(depthCement*widthCement*lengthCement) / 12;
+		   	var bagCoverage = parseFloat(bagWeight) / 20 * .15;
+		   	var numberBags = parseFloat(volumeFt3/bagCoverage + 1);
+			
+	
+		
+			document.getElementById("answer1").innerHTML = "volume in ft cubed " + Math.round(volumeFt3*100)/100 + " number of bags " + Math.round(numberBags) + ". Do not exceed the payload capacity of your vehicle";
+		
+	}
+</script>
+<script type = "text/javascript">
+		function f2(){
+			
+			var lengthGravel = document.getElementById("lengthGravel").value;
+		  	var widthGravel = document.getElementById("widthGravel").value;
+		   	var depthGravel = document.getElementById("depthGravel").value;
+		   			
+			var volumeGravelFt3 = parseFloat(depthGravel*widthGravel*lengthGravel) / 12;
+		   	var volumeGravelY3 = volumeGravelFt3*0.037037;
+		   	var order = Math.round(volumeGravelY3*100)/100;
+			var weightGravel = order * 2900
+			
+	
+		
+			document.getElementById("answer2").innerHTML = "Cubic yards of gravel " + order + ". Weight of gravel" + weightGravel + "pounds. Do not exceed the payload capacity of your vehicle!";
+		}
+		
+		</script>
+	
+</html> 
