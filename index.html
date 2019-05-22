@@ -52,7 +52,7 @@ Enter depth in inches<br>
 		 
 	<button onclick = "f2()">Calculate</button>
 	  
-	    <h1 id = "answerGravel"></h1>
+	    <h1 id = "answer"></h1>
 
 
 This calculator helps estimate the number of bags of cement needed to build a 4 to 6 inch cement foundation for varying sizes of sheds.<br>
@@ -83,7 +83,7 @@ This calculator helps estimate the number of bags of cement needed to build a 4 
 		  <br>
 	  <button onclick = "f1()">Calculate</button>
 	  
-	    <h1 id = "answerCement"></h1>
+	    <h1 id = "answer"></h1>
 	  
 	  
 		  
@@ -109,7 +109,7 @@ For questions, or to offer suggestions please email -----
 			
 	
 		
-			document.getElementById("answerCement").innerHTML = "volume in ft cubed " + Math.round(volumeFt3*100)/100 + " number of bags " + Math.round(numberBags) + ". Do not exceed the payload capacity of your vehicle";
+			document.getElementById("answer").innerHTML = "volume in ft cubed " + Math.round(volumeFt3*100)/100 + " number of bags " + Math.round(numberBags) + ". Do not exceed the payload capacity of your vehicle";
 		
 	}
 		function f2(){
@@ -125,7 +125,7 @@ For questions, or to offer suggestions please email -----
 			
 	
 		
-			document.getElementById("answerGravel").innerHTML = "Cubic yards of gravel " + order + ". Weight of gravel" + weightGravel + "pounds. Do not exceed the payload capacity of your vehicle!";
+			document.getElementById("answer").innerHTML = "Cubic yards of gravel " + order + ". Weight of gravel" + weightGravel + "pounds. Do not exceed the payload capacity of your vehicle!";
 			
 		
 		</script>
