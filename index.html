@@ -36,19 +36,23 @@ This calculator helps estimate the number of bags of cement needed to build a 4 
 	
 		  
 		  Enter length in feet
-		  lengthCement<input type="number" id= "lengthCement">
+		  lengthCement <input type="number" id= "lengthCement">
 		  <br>
 		  <br>
 		  
 		  Enter width in feet
-		  widthCement<input type="number" id= "widthCement">
+		  widthCement <input type="number" id= "widthCement">
 		  <br>
 		  <br>
 		
-	
+	 Enter depth in inches
+		  depthCement <input type="number" id= "depthCement">
+		  <br>
+		  <br>
+		  
 		 
 		  Enter bag weight in pounds
-		  bagWeight<input type="number" id= "bagWeight">
+		  bagWeight <input type="number" id= "bagWeight">
 		  <br>
 		  <br>
 	  <button onclick = "f1()">Calculate</button>
@@ -70,7 +74,7 @@ For questions, or to offer suggestions please email -----
 			
 			var lengthCement = document.getElementById("lengthCement").value;
 		  	var widthCement = document.getElementById("widthCement").value;
-		   	var depthCement = document.getElementById("widthCement").value;
+		   	var depthCement = document.getElementById("depthCement").value;
 		   	var bagWeight = document.getElementById("bagWeight").value;
 		
 			var volumeFt3 = parseFloat(depthCement*widthCement*lengthCement) / 12;
