@@ -31,9 +31,32 @@ This calculator helps estimate the cubic yards of gravel needed to build a 4 to 
 Enter length in feet <br>
 Enter width in feet<br>
 Enter depth in inches<br>
+		  <h1>Calculate Bags of cement</h1>
+	
+		  
+		  Enter length in feet
+		  lengthGravel <input type="number" id= "lengthGravel">
+		  <br>
+		  <br>
+		  
+		  Enter width in feet
+		  widthGravel <input type="number" id= "widthGravel">
+		  <br>
+		  <br>
+		
+	 Enter depth in inches
+		  depthGravel <input type="number" id= "depthGravel">
+		  <br>
+		  <br>
+		  
+		 
+	<button onclick = "f2()">Calculate</button>
+	  
+	    <h1 id = "answerGravel"></h1>
 
 
 This calculator helps estimate the number of bags of cement needed to build a 4 to 6 inch cement foundation for varying sizes of sheds.<br>
+		  What is the payload capacity of your vehicle?<br>
 
 		<h1>Calculate Bags of cement</h1>
 	
@@ -60,7 +83,7 @@ This calculator helps estimate the number of bags of cement needed to build a 4 
 		  <br>
 	  <button onclick = "f1()">Calculate</button>
 	  
-	    <h1 id = "answer"></h1>
+	    <h1 id = "answerCement"></h1>
 	  
 	  
 		  
@@ -86,9 +109,24 @@ For questions, or to offer suggestions please email -----
 			
 	
 		
-			document.getElementById("answer").innerHTML = "volume in ft cubed " + Math.round(volumeFt3*100)/100 + " number of bags " + Math.round(numberBags);
+			document.getElementById("answerCement").innerHTML = "volume in ft cubed " + Math.round(volumeFt3*100)/100 + " number of bags " + Math.round(numberBags) + ". Do not exceed the payload capacity of your vehicle";
 		
 	}
+		function f2(){
+			
+			var lengthGravel = document.getElementById("lengthGravel").value;
+		  	var widthGravel = document.getElementById("widthGravel").value;
+		   	var depthGravel = document.getElementById("depthGravel").value;
+		   			
+			var volumeGravelFt3 = parseFloat(depthGravel*widthGravel*lengthGravel) / 12;
+		   	var volumeGravelY3 = volumeGravelFt3*0.037037;
+		   	var order = Math.round(volumeGravelY3*100)/100;
+			var weightGravel = order * 2900
+			
+	
+		
+			document.getElementById("answerGravel").innerHTML = "Cubic yards of gravel " + order + ". Weight of gravel" + weightGravel + "pounds. Do not exceed the payload capacity of your vehicle!";
+			
 		
 		</script>
 	
