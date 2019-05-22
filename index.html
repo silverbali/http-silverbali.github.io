@@ -77,7 +77,7 @@ For questions, or to offer suggestions please email -----
 		   	var depthCement = document.getElementById("widthCement").value;
 		   	var bagWeight = document.getElementById("bagWeight").value;
 		
-			var volumeFt3 = parseFloat(depthCement) * parseFloat(widthCement) * parseFloat(lengthCement) / 12;
+			var volumeFt3 = parseFloat(depthCement*widthCement*lengthCement) / 12;
 		   	var bagCoverage = parseFloat(bagWeight) / 20 * .15;
 		   	var numberBags = parseFloat(volumeFt3/bagCoverage) + 1;
 			
