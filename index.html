@@ -53,9 +53,10 @@ This calculator helps estimate the number of bags of cement needed to build a 4 
 For questions, or to offer suggestions please email -----
 
 	  </p>
-	  <input type="button" value="click me" onclick="f1()" />
+	  
 	  		 
       </body>
+	<input type="button" value="click me" onclick="f1()" />
 	<script type = "text/javascript">
 	function f1(){
 			
@@ -64,11 +65,12 @@ For questions, or to offer suggestions please email -----
 		   	var depthCement = document.getElementById("widthCement").value;
 		   	var bagWeight = document.getElementById("bagWeight").value;
 		
-			var volumeFt3 = depthCement * widthCement * lengthCement / 12;
-		   	var bagCoverage = bagWeight / 20 * .15;
-		   	var numberBags = volumeFt3 / bagCoverage + 1;
-					
-			alert('Number of bags required is ' + numberBags + ' ' + bagWeight ' pound bags');
+			var volumeFt3 = parseFloat(depthCement) * parseFloat(widthCement) * parseFloat(lengthCement) / 12;
+		   	var bagCoverage = parseFloat(bagWeight) / 20 * .15;
+		   	var numberBags = parseFloat(volumeFt3) / parseFloat(bagCoverage) + 1;
+			
+		if(!isNaN(numberBags))
+			document.getElementById("answer").innerHTML = 'Number of bags required is ' + numberBags + ' ' + bagWeight ' pound bags';
 		}
 		</script>
 	
