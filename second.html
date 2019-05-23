@@ -400,23 +400,6 @@ var total = subtotal + subtotal*taxRate
 		
 	}
 </script>
-<script type = "text/javascript">
-		function f2(){
-			
-			var lengthGravel = document.getElementById("lengthGravel").value;
-		  	var widthGravel = document.getElementById("widthGravel").value;
-		   	var depthGravel = document.getElementById("depthGravel").value;
-		   			
-			var volumeGravelFt3 = parseFloat(depthGravel*widthGravel*lengthGravel) / 12;
-		   	var volumeGravelY3 = volumeGravelFt3*0.037037;
-		   	var order = Math.round(volumeGravelY3*100)/100;
-			var weightGravel = order * 2900
-			
-	
-		
-			document.getElementById("answer2").innerHTML = "Cubic yards of gravel " + order + ". Weight of gravel" + weightGravel + "pounds. Do not exceed the payload capacity of your vehicle!";
-		}
-		
-		</script>
+
 	
 </html> 
