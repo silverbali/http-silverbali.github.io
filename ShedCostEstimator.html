@@ -99,6 +99,127 @@
 		  
 		  document.getElementById("answerNails").innerHTML = answerNails;
 		  
+
+	  // wall right
+		  
+    var studSpace = document.getElementById("stud").value
+    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3
+    var studCost = 9.97
+    var answerStud = studCost * numberStuds
+    
+    document.getElementById("answerStud").innerHTML = answerStud
+	  
+	  // siding
+	  
+	  var height = 8
+	  areaSiding =  length * height;
+	  
+	  
+	  coverage = 32
+	  sidingTiles = areaSiding/32
+	  costSiding = 25.48
+	  
+	  var answerSiding = sidingTiles * costSiding;
+	  
+	  document.getElementById("answerSiding").innerHTML = answerSiding;
+		  var numberTies = numberStuds - 1;
+		  
+		  var tiesCost = 2.50;
+		  
+		  var answerTies = numberTies * tiesCost;
+		  
+		  document.getElementById("answerTies").innerHTML = answerTies;
+		  
+		  // nails includes wall only using approx cost of stainless nails per pound
+		  
+		  var poundNails = length *.5
+		  var costNails = 4.8
+		  
+		  var answerNails = poundNails * costNails
+		  
+		  document.getElementById("answerNails").innerHTML = answerNails;
+		  
+		  	  // wall Rear
+		  
+    var studSpace = document.getElementById("stud").value
+    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3
+    var studCost = 9.97
+    var answerStud = studCost * numberStuds
+    
+    document.getElementById("answerStud").innerHTML = answerStud
+	  
+	  // siding
+	  
+	  var height = 8
+	  areaSiding =  length * height;
+	  
+	  
+	  coverage = 32
+	  sidingTiles = areaSiding/32
+	  costSiding = 25.48
+	  
+	  var answerSiding = sidingTiles * costSiding;
+	  
+	  document.getElementById("answerSiding").innerHTML = answerSiding;
+		  var numberTies = numberStuds - 1;
+		  
+		  var tiesCost = 2.50;
+		  
+		  var answerTies = numberTies * tiesCost;
+		  
+		  document.getElementById("answerTies").innerHTML = answerTies;
+		  
+		  // nails includes wall only using approx cost of stainless nails per pound
+		  
+		  var poundNails = length *.5
+		  var costNails = 4.8
+		  
+		  var answerNails = poundNails * costNails
+		  
+		  document.getElementById("answerNails").innerHTML = answerNails;
+		  
+		  
+		  		  	  // wall Front
+		  
+    var studSpace = document.getElementById("stud").value
+    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3
+    var studCost = 9.97
+    var answerStud = studCost * numberStuds
+    
+    document.getElementById("answerStud").innerHTML = answerStud
+	  
+	  // siding
+	  
+	  var height = 8
+	  areaSiding =  length * height;
+	  
+	  
+	  coverage = 32
+	  sidingTiles = areaSiding/32
+	  costSiding = 25.48
+	  
+	  var answerSiding = sidingTiles * costSiding;
+	  
+	  document.getElementById("answerSiding").innerHTML = answerSiding;
+		  var numberTies = numberStuds - 1;
+		  
+		  var tiesCost = 2.50;
+		  
+		  var answerTies = numberTies * tiesCost;
+		  
+		  document.getElementById("answerTies").innerHTML = answerTies;
+		  
+		  // nails includes wall only using approx cost of stainless nails per pound
+		  
+		  var poundNails = length *.5
+		  var costNails = 4.8
+		  
+		  var answerNails = poundNails * costNails
+		  
+		  document.getElementById("answerNails").innerHTML = answerNails;
+		  
+		  
+		  
 		  // Roof
 		  // trusses
 		  
@@ -118,7 +239,47 @@
 		  
 		  document.getElementById("answerFelt").innerHTML = answerFelt;
 		  
-		  //
+		  // Shingles rounded up per box
+		  
+		  // 124 boxes / 10000 sqft floor space with medium pitch
+		  
+		  var boxesPerArea = 124/10000
+		  
+		  var boxesTotal = Math.ceil(length*width*boxesPerArea)
+		  
+		  var boxesCost = 30
+		  
+		  var answerBoxes = boxesCost * boxesTotal;
+		  
+		  document.getElementById("answerBoxes").innerHTML = answerBoxes;
+		  
+		  // roofing nails
+		  
+		  var poundsPerArea = 20 / 100;
+		  
+		  var roofNailsTotal = areaFloor * poundsPerArea;
+		  
+		  var roofNailsCost = 2.25;
+		  
+		  var answerRoofNails = roofNailsTotal * roofNailsCost;
+		  
+		  document.getElementById("answerRoofNails").innerHTML = answerRoofNails;
+		  
+		  // trim and vents and gutters etc.
+		  
+		  var perimeter = 2 * length + 2 * width;
+		  // trim per foot plus 1 vent every 8 ft of trim
+		  var costPerFoot = 2 + (2/8);
+		  
+		  var answerTrim = perimeter * costPerFoot;
+		  
+		  document.getElementById("answerTrim").innerHTML = answerTrim;
+		  
+		  
+		  
+		  
+		  
+		  
 		  
 		  
 		  
