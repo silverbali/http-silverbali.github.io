@@ -5,12 +5,12 @@
   if (document.getElementById('fourInch').checked && document.getElementById('gable').checked) {
     
     //foundation
-    var lengthCement = document.getElementById("length").value;
-    var lengthCement = document.getElementById("length").value;
+    var length = document.getElementById("length").value;
+    var width = document.getElementById("width").value;
     var depthCement = 4;
     var bagWeight = 80;
     
-    var volumeFt3 = parseFloat(depthCement*widthCement*lengthCement) / 12;
+    var volumeFt3 = parseFloat(depthCement*length*width) / 12;
 		   	var bagCoverage = parseFloat(bagWeight) / 20 * .15;
 		   	var numberBags = parseFloat(volumeFt3/bagCoverage + 1);
     
@@ -20,14 +20,16 @@
     
     document.getElementById("answerCement").innerHTML = answerCement;
     
+	  function f1() {
+	  
     //flooring
     
-	  var lengthFloor = document.getElementById("length").value;
-	  var widthFloor = document.getElementById("width").value;
+	  var length = document.getElementById("length").value;
+	  var width = document.getElementById("width").value;
 	  
 	  var costTile = 3;
 	  
-	  var areaFloor = lengthFloor * widthFloor;
+	  var areaFloor = length * width;
 	  var answerFloor = areaFloor * costTile;
 	  
 	  document.getElementById("answerFloor").innerHTML = answerFloor;
@@ -43,6 +45,30 @@
     var answerStud = studCost * numberStuds
     
     document.getElementById("answerStud").innerHTML = answerStud
+	  
+	  // siding
+	  
+	  var height = 8
+	  areaSiding =  length * height;
+	  
+	  
+	  coverage = 32
+	  sidingTiles = areaSiding/32
+	  costSiding = 25.48
+	  
+	  var answerSiding = sidingTiles * costSiding;
+	  
+	  document.getElementById("answerSiding").innerHTML = answerSiding;
+	  
+	  // windows
+		  
+		  var windows = document.getElementById("windows").value;
+		  var windowsCost = 40.00
+	  
+	  
+	  
+	  
+	  
 	  
 
     
@@ -183,7 +209,7 @@ incedentals
     
   }
   
-  
+  }
 </script>
 
   
