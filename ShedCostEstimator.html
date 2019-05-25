@@ -22,7 +22,7 @@
     
 	  function f1() {
 	  
-    //flooring
+    	  //flooring
     
 	  var length = document.getElementById("length").value;
 	  var width = document.getElementById("width").value;
@@ -63,7 +63,22 @@
 	  // windows
 		  
 		  var windows = document.getElementById("windows").value;
-		  var windowsCost = 40.00
+		  var windowsCost = 40.00;
+		  var answerWindow = (windows * windowCost) + (15 * windows);
+		  
+		  document.getElementById("answerWindow").innerHTML = answerWindow;
+		  
+	  //  hurricane ties
+		  
+		  var numberTies = numberStuds - 1;
+		  
+		  var tiesCost = 2.50;
+		  
+		  var answerTies = numberTies * tiesCost;
+		  
+		  document.getElementById("answerTies").innerHTML = answerTies;
+		  
+		  
 	  
 	  
 	  
