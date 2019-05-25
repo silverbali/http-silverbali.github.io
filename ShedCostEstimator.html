@@ -275,52 +275,9 @@
 		  
 		  document.getElementById("answerTrim").innerHTML = answerTrim;
 		  
+		  // total plus wastage and tax
 		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-	  
-	  
-	  
-	  
-	  
-	  
-
-    
-    
-substrate
-twoBySix
-fourByFour
-floorPlywood
-flooring
-twoByFour
-siding
-wallPlywood
-windows
-doors
-staples
-nails1
-nails2
-nails3
-nails4
-fasteners
-screws
-shingles
-felt
-silicone
-adhesive
-oneBySix
-oneByFour
-incedentals
-
-    
-    
+		  var taxRate = document.getElementById("taxRate").value;    
     
   }
   
@@ -350,6 +307,282 @@ incedentals
   
   
   if (document.getElementById('sixInch').checked && document.getElementById('gable').checked) {
+	  
+	      
+    //foundation
+    var length = document.getElementById("length").value;
+    var width = document.getElementById("width").value;
+    var depthCement = 6;
+    var bagWeight = 80;
+    
+    var volumeFt3 = parseFloat(depthCement*length*width) / 12;
+		   	var bagCoverage = parseFloat(bagWeight) / 20 * .15;
+		   	var numberBags = parseFloat(volumeFt3/bagCoverage + 1);
+    
+    var costBag = 3.12
+    
+    var answerCement = Math.round(Math.round(numberBags) * costBag * 1.10 * 100) / 100;
+    
+    document.getElementById("answerCement").innerHTML = answerCement;
+    
+	  function f1() {
+	  
+    	  //flooring
+    
+	  var length = document.getElementById("length").value;
+	  var width = document.getElementById("width").value;
+	  
+	  var costTile = 3;
+	  
+	  var areaFloor = length * width;
+	  var answerFloor = areaFloor * costTile;
+	  
+	  document.getElementById("answerFloor").innerHTML = answerFloor;
+		  
+		  // flooring adhesive
+		  area
+		  
+		  var gallonsAdhesive = areaFloor / 45;
+		  
+		  var costAdhesive = 25
+		  
+		  war answerAdhesive = gallonsAdhesive * costAdhesive;
+		  
+		  document.getElementById("answerAdhesive").innerHTML = answerAdhesive;
+		  
+	  
+	  
+	  
+	  // wall left
+	  // studs
+	  
+    var studSpace = document.getElementById("stud").value
+    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3
+    var studCost = 9.97
+    var answerStud = studCost * numberStuds
+    
+    document.getElementById("answerStud").innerHTML = answerStud
+	  
+	  // siding
+	  
+	  var height = 8
+	  areaSiding =  length * height;
+	  
+	  
+	  coverage = 32
+	  sidingTiles = areaSiding/32
+	  costSiding = 25.48
+	  
+	  var answerSiding = sidingTiles * costSiding;
+	  
+	  document.getElementById("answerSiding").innerHTML = answerSiding;
+	  
+	  // windows includes structural additions, trim, and materials
+		  
+		  var windows = document.getElementById("windows").value;
+		  var windowsCost = 40.00;
+		  var answerWindow = (windows * windowCost) + (40 * windows);
+		  
+		  document.getElementById("answerWindow").innerHTML = answerWindow;
+		  
+	  //  hurricane ties
+		  
+		  var numberTies = numberStuds - 1;
+		  
+		  var tiesCost = 2.50;
+		  
+		  var answerTies = numberTies * tiesCost;
+		  
+		  document.getElementById("answerTies").innerHTML = answerTies;
+		  
+		  // nails includes wall only using approx cost of stainless nails per pound
+		  
+		  var poundNails = length *.5
+		  var costNails = 4.8
+		  
+		  var answerNails = poundNails * costNails
+		  
+		  document.getElementById("answerNails").innerHTML = answerNails;
+		  
+
+	  // wall right
+		  
+    var studSpace = document.getElementById("stud").value
+    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3
+    var studCost = 9.97
+    var answerStud = studCost * numberStuds
+    
+    document.getElementById("answerStud").innerHTML = answerStud
+	  
+	  // siding
+	  
+	  var height = 8
+	  areaSiding =  length * height;
+	  
+	  
+	  coverage = 32
+	  sidingTiles = areaSiding/32
+	  costSiding = 25.48
+	  
+	  var answerSiding = sidingTiles * costSiding;
+	  
+	  document.getElementById("answerSiding").innerHTML = answerSiding;
+		  var numberTies = numberStuds - 1;
+		  
+		  var tiesCost = 2.50;
+		  
+		  var answerTies = numberTies * tiesCost;
+		  
+		  document.getElementById("answerTies").innerHTML = answerTies;
+		  
+		  // nails includes wall only using approx cost of stainless nails per pound
+		  
+		  var poundNails = length *.5
+		  var costNails = 4.8
+		  
+		  var answerNails = poundNails * costNails
+		  
+		  document.getElementById("answerNails").innerHTML = answerNails;
+		  
+		  	  // wall Rear
+		  
+    var studSpace = document.getElementById("stud").value
+    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3
+    var studCost = 9.97
+    var answerStud = studCost * numberStuds
+    
+    document.getElementById("answerStud").innerHTML = answerStud
+	  
+	  // siding
+	  
+	  var height = 8
+	  areaSiding =  length * height;
+	  
+	  
+	  coverage = 32
+	  sidingTiles = areaSiding/32
+	  costSiding = 25.48
+	  
+	  var answerSiding = sidingTiles * costSiding;
+	  
+	  document.getElementById("answerSiding").innerHTML = answerSiding;
+		  var numberTies = numberStuds - 1;
+		  
+		  var tiesCost = 2.50;
+		  
+		  var answerTies = numberTies * tiesCost;
+		  
+		  document.getElementById("answerTies").innerHTML = answerTies;
+		  
+		  // nails includes wall only using approx cost of stainless nails per pound
+		  
+		  var poundNails = width *.5
+		  var costNails = 4.8
+		  
+		  var answerNails = poundNails * costNails
+		  
+		  document.getElementById("answerNails").innerHTML = answerNails;
+		  
+		  
+		  		  	  // wall Front
+		  
+    var studSpace = document.getElementById("stud").value
+    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3
+    var studCost = 9.97
+    var answerStud = studCost * numberStuds
+    
+    document.getElementById("answerStud").innerHTML = answerStud
+	  
+	  // siding
+	  
+	  var height = 8
+	  areaSiding =  length * height;
+	  
+	  
+	  coverage = 32
+	  sidingTiles = areaSiding/32
+	  costSiding = 25.48
+	  
+	  var answerSiding = sidingTiles * costSiding;
+	  
+	  document.getElementById("answerSiding").innerHTML = answerSiding;
+		  var numberTies = numberStuds - 1;
+		  
+		  var tiesCost = 2.50;
+		  
+		  var answerTies = numberTies * tiesCost;
+		  
+		  document.getElementById("answerTies").innerHTML = answerTies;
+		  
+		  // nails includes wall only using approx cost of stainless nails per pound
+		  
+		  var poundNails = width *.5
+		  var costNails = 4.8
+		  
+		  var answerNails = poundNails * costNails
+		  
+		  document.getElementById("answerNails").innerHTML = answerNails;
+		  
+		  
+		  
+		  // Roof
+		  // trusses
+		  
+		  var trusses = numberStuds - 1
+		  // 60 dollars per 10 ft
+		  var trussCostPerFt = 60 / 10;
+		  
+		  var answerTruss = trusses * trussCostPerFt;
+		  
+		  document.getElementById("answerTruss").innerHTML = answerTruss;
+		  
+		  // felt
+		  // most smaller structures will only use 1 roll of roofing felt, priced for 2
+		  var feltCost = 140;
+		  
+		  var answerFelt = feltCost;
+		  
+		  document.getElementById("answerFelt").innerHTML = answerFelt;
+		  
+		  // Shingles rounded up per box
+		  
+		  // 124 boxes / 10000 sqft floor space with medium pitch
+		  
+		  var boxesPerArea = 124/10000
+		  
+		  var boxesTotal = Math.ceil(length*width*boxesPerArea)
+		  
+		  var boxesCost = 30
+		  
+		  var answerBoxes = boxesCost * boxesTotal;
+		  
+		  document.getElementById("answerBoxes").innerHTML = answerBoxes;
+		  
+		  // roofing nails
+		  
+		  var poundsPerArea = 20 / 100;
+		  
+		  var roofNailsTotal = areaFloor * poundsPerArea;
+		  
+		  var roofNailsCost = 2.25;
+		  
+		  var answerRoofNails = roofNailsTotal * roofNailsCost;
+		  
+		  document.getElementById("answerRoofNails").innerHTML = answerRoofNails;
+		  
+		  // trim and vents and gutters etc.
+		  
+		  var perimeter = 2 * length + 2 * width;
+		  // trim per foot plus 1 vent every 8 ft of trim
+		  var costPerFoot = 2 + (2/8);
+		  
+		  var answerTrim = perimeter * costPerFoot;
+		  
+		  document.getElementById("answerTrim").innerHTML = answerTrim;
+		  
+		  // total plus wastage and tax
+		  
+		  var taxRate = document.getElementById("taxRate").value;
     
   }
   
