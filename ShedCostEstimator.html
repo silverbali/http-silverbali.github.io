@@ -1,1 +1,143 @@
 
+
+<script type = "text/javascript">
+
+  if (document.getElementById('fourInch').checked && document.getElementById('gable').checked) {
+    
+    //foundation
+    var lengthCement = document.getElementById("length").value;
+    var lengthCement = document.getElementById("length").value;
+    var depthCement = 4;
+    var bagWeight = 80;
+    
+    var volumeFt3 = parseFloat(depthCement*widthCement*lengthCement) / 12;
+		   	var bagCoverage = parseFloat(bagWeight) / 20 * .15;
+		   	var numberBags = parseFloat(volumeFt3/bagCoverage + 1);
+    
+    var costBag = 3.12
+    
+    var answerCement = Math.round(Math.round(numberBags) * costBag * 1.10 * 100) / 100;
+    
+    document.getElementById("answerCement").innerHTML = answerCement;
+    
+    //flooring
+    
+    var lengthFloor = document.getElementById("length").value;
+    
+    
+    
+  }
+  
+  
+  
+  
+  
+  if (document.getElementById('fourInch').checked && document.getElementById('pitched').checked) {
+    
+  }
+  
+  
+  
+  
+  if (document.getElementById('fourInch').checked && document.getElementById('flat').checked) {
+    
+  }
+  
+  
+  
+  
+  if (document.getElementById('fourInch').checked && document.getElementById('hip').checked) {
+    
+  }
+  
+  
+  
+  
+  if (document.getElementById('sixInch').checked && document.getElementById('gable').checked) {
+    
+  }
+  
+  
+  
+  
+  if (document.getElementById('sixInch').checked && document.getElementById('pitched').checked) {
+    
+  }
+  
+  
+  
+  
+  if (document.getElementById('sixInch').checked && document.getElementById('flat').checked) {
+    
+  }
+  
+  
+  
+  
+  if (document.getElementById('sixInch').checked && document.getElementById('hip').checked) {
+    
+  }
+  
+  
+  
+  
+  if (document.getElementById('gravelSkid').checked && document.getElementById('gable').checked) {
+    
+  }
+  
+  
+  
+  
+  if (document.getElementById('gravelSkid').checked && document.getElementById('pitched').checked) {
+    
+  }
+  
+  
+  
+  
+  if (document.getElementById('gravelSkid').checked && document.getElementById('flat').checked) {
+    
+  }
+  
+  
+  
+  
+  if (document.getElementById('gravelSkid').checked && document.getElementById('hip').checked) {
+    
+  }
+  
+  
+  
+  
+  if (document.getElementById('post').checked && document.getElementById('gable').checked) {
+    
+  }
+  
+  
+  
+  
+  if (document.getElementById('post').checked && document.getElementById('pitched').checked) {
+    
+  }
+  
+  
+  
+  
+  if (document.getElementById('post').checked && document.getElementById('flat').checked) {
+    
+  }
+  
+  
+  
+  
+  if (document.getElementById('post').checked && document.getElementById('hip').checked) {
+    
+  }
+  
+  
+</script>
+
+  
+  
+  
+  
