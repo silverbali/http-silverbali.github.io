@@ -177,7 +177,7 @@ var length = document.getElementById("length").value;
 	  var length = document.getElementById("length").value;
 	  var width = document.getElementById("width").value;
 	  
-	  var costTile = 3;
+	  var costTile = 1;
 	  
 	  var areaFloor = length * width;
 	  var answerFloor = areaFloor * costTile;
@@ -186,7 +186,7 @@ var length = document.getElementById("length").value;
 		  
 		  // flooring adhesive
 		 
-	/*	  
+		  
 		  var gallonsAdhesive = areaFloor / 45;
 		  
 		  var costAdhesive = 25;
@@ -195,7 +195,7 @@ var length = document.getElementById("length").value;
 		  
 //		  document.getElementById("answerAdhesive").innerHTML = answerAdhesive;
 		  
-	  
+	/*  
 	  
 	  
 	  // wall left
@@ -429,7 +429,7 @@ var length = document.getElementById("length").value;
 		  
 	*/	  
 		  
-		  var subtotal = answerCement + answerFloor; //+ answerAdhesive + answerStud + answerSiding + answerWindow + answerTies + answerNailsLength + answerStud + answerSiding + answerTies + answerNailsLength + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerTruss + answerFelt + answerBoxes + answerRoofNails + answerTrim; -->
+		  var subtotal = answerCement + answerFloor + answerAdhesive; //+ answerStud + answerSiding + answerWindow + answerTies + answerNailsLength + answerStud + answerSiding + answerTies + answerNailsLength + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerTruss + answerFelt + answerBoxes + answerRoofNails + answerTrim; -->
 		  var results = subtotal;
 	  
 	  document.getElementById("results").innerHTML = results;
