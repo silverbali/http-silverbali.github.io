@@ -201,10 +201,10 @@ var length = document.getElementById("length").value;
 	  // wall left
 	  // studs
 	  
-    var studSpace = 16;
-    var numberStuds = Math.round(document.getElementById("length").value * 12 / studSpace) + 3;
+    var studSpaceLeft = 16;
+    var numberStudsLeft = Math.round(document.getElementById("length").value * 12 / studSpace) + 3;
     var studCost = 9.97;
-    var answerStud = Math.round(studCost * numberStuds * 100) / 100;
+    var answerStudsLeft = Math.round(studCost * numberStuds * 100) / 100;
     
  //   document.getElementById("answerStud").innerHTML = answerStud;
 	  
@@ -218,7 +218,7 @@ var length = document.getElementById("length").value;
 	  var sidingTiles = areaSiding/32;
 	  var costSiding = 25.48;
 	  
-	  var answerSiding = Math.round(sidingTiles * costSiding * 100) / 100;
+	  var answerSidingLeft = Math.round(sidingTiles * costSiding * 100) / 100;
 	  
 //	  document.getElementById("answerSiding").innerHTML = answerSiding;
 	  
@@ -232,30 +232,29 @@ var length = document.getElementById("length").value;
 		  
 	  //  hurricane ties
 		  
-		  var numberTies = numberStuds - 1;
+		  var numberTies = numberStudsLeft - 1;
 		  
 		  var tiesCost = 2.50;
 		  
-		  var answerTies = numberTies * tiesCost;
+		  var answerTiesLeft = numberTies * tiesCost;
 		  
 //		  document.getElementById("answerTies").innerHTML = answerTies;
 		  
 		  // nails includes wall only using approx cost of stainless nails per pound
 		  
-		  var poundNails = length *.5;
+		  var poundNailsLeft = length *.5;
 		  var costNails = 4.8;
 		  
-		  var answerNailsLength = poundNails * costNails;
+		  var answerNailsLeft = poundNailsLeft * costNails;
 		  
 //		  document.getElementById("answerNails").innerHTML = answerNailsLength;
 		  
 
 	  // wall right
 		  
-   var studSpace = document.getElementById("stud").value;
-    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3;
-    var studCost = 9.97;
-    var answerStud = studCost * numberStuds;
+   var studSpaceRight = 16;
+    var numberStudsRight = Math.round(document.getElementById("length").value * 12 / 16) + 3;
+    var answerStudsRight = studCost * numberStudsRight;
     
 //    document.getElementById("answerStud").innerHTML = answerStud;
 	  
@@ -267,16 +266,13 @@ var length = document.getElementById("length").value;
 	  
 	  var coverage = 32;
 	  var sidingTiles = areaSiding/32;
-	  var costSiding = 25.48;
 	  
-	  var answerSiding = sidingTiles * costSiding;
+	  var answerSidingRight = sidingTiles * costSiding;
 	  
 //	  document.getElementById("answerSiding").innerHTML = answerSiding;
- /*		  var numberTies = numberStuds - 1;
+	  var numberTiesRight = numberStudsRight - 1;
 		  
-		  var tiesCost = 2.50;
-		  
-		  var answerTies = numberTies * tiesCost;
+		  var answerTiesRight = numberTiesRight * tiesCost;
 		  
 //		  document.getElementById("answerTies").innerHTML = answerTies;
 		  
@@ -285,16 +281,15 @@ var length = document.getElementById("length").value;
 		  var poundNails = length *.5;
 		  var costNails = 4.8;
 		  
-		  var answerNailsLength = poundNails * costNails;
+		  var answerNailsRight = poundNails * costNails;
 		  
 //		  document.getElementById("answerNails").innerHTML = answerNailsLength;
 		  
 		  	  // wall Rear
 		  
-    var studSpace = document.getElementById("stud").value;
-    var numberStuds = Math.round(document.getElementById("width").value * 12 / 16) + 3;
-    var studCost = 9.97;
-    var answerStudWidth = studCost * numberStuds;
+    var studSpaceRear = 16
+    var numberStudsRear = Math.round(document.getElementById("width").value * 12 / 16) + 3;
+    var answerStudRear = studCost * numberStuds;
     
 //    document.getElementById("answerStudWidth").innerHTML = answerStudWidth;
 	  
@@ -306,35 +301,26 @@ var length = document.getElementById("length").value;
 	  
 	  var coverage = 32;
 	  var sidingTiles = areaSiding/32;
-	  var costSiding = 25.48;
 	  
-	  var answerSiding = sidingTiles * costSiding;
+	  var answerSidingRear = sidingTiles * costSiding;
 	  
 //	  document.getElementById("answerSiding").innerHTML = answerSiding;
-		  var numberTies = numberStuds - 1;
-		  
-		  var tiesCost = 2.50;
-		  
-		  var answerTies = numberTies * tiesCost;
-		  
-//		  document.getElementById("answerTies").innerHTML = answerTies;
 		  
 		  // nails includes wall only using approx cost of stainless nails per pound
 		  
 		  var poundNails = width *.5;
 		  var costNails = 4.8;
 		  
-		  var answerNailsWidth = poundNails * costNails;
+		  var answerNailsRear = poundNails * costNails;
 		  
 //		  document.getElementById("answerNails").innerHTML = answerNailsWidth;
 		  
 		  
 		  		  	  // wall Front
 		  
-    var studSpace = document.getElementById("stud").value;
-    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3;
-    var studCost = 9.97;
-    var answerStudWidth = studCost * numberStuds;
+    var studSpaceFront = 16;
+    var numberStudsFront = Math.round(document.getElementById("length").value * 12 / 16) + 3;
+    var answerStudFront = studCost * numberStudsFront;
     
  //   document.getElementById("answerStudWidth").innerHTML = answerStudWidth;
 	  
@@ -346,25 +332,18 @@ var length = document.getElementById("length").value;
 	  
 	  var coverage = 32;
 	  var sidingTiles = areaSiding/32;
-	  var costSiding = 25.48;
 	  
-	  var answerSiding = sidingTiles * costSiding;
+	  var answerSidingFront = sidingTiles * costSiding;
 	  
 //	  document.getElementById("answerSiding").innerHTML = answerSiding;
-		  var numberTies = numberStuds - 1;
-		  
-		  var tiesCost = 2.50;
-		  
-		  var answerTies = numberTies * tiesCost;
-		  
-//		  document.getElementById("answerTies").innerHTML = answerTies;
+		 
 		  
 		  // nails includes wall only using approx cost of stainless nails per pound
 		  
 		  var poundNails = width *.5;
 		  var costNails = 4.8;
 		  
-		  var answerNailsWidth = poundNails * costNails;
+		  var answerNailsFront = poundNails * costNails;
 		  
 //		  document.getElementById("answerNails").innerHTML = answerNailsWidth;
 		  
@@ -373,7 +352,7 @@ var length = document.getElementById("length").value;
 		  // Roof
 		  // trusses
 		  
-		  var trusses = numberStuds - 1;
+		  var trusses = numberStudsLeft - 1;
 		  // 60 dollars per 10 ft
 		  var trussCostPerFt = 60 / 10;
 		  
@@ -429,8 +408,31 @@ var length = document.getElementById("length").value;
 		  
 	*/	  
 		  
-		  var subtotal = answerCement + answerFloor + answerAdhesive + answerStud + answerSiding + answerWindow + answerTies + answerNailsLength + answerStud + answerSiding ; //+ answerTies + answerNailsLength + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerTruss + answerFelt + answerBoxes + answerRoofNails + answerTrim; -->
-		  var results = Math.round(subtotal * 100) / 100;
+		  var subtotal = answerCement+
+answerFloor+
+answerAdhesive+
+answerStudsLeft+
+answerSidingLeft+
+answerWindow+
+answerTiesLeft+
+answerNailsLeft+
+answerStudsRight+
+answerSidingRight+
+answerTiesRight+
+answerNailsRight+
+answerStudRear+
+answerSidingRear+
+answerNailsRear+
+answerStudFront+
+answerSidingFront+
+answerNailsFront+
+answerTruss+
+answerFelt+
+answerBoxes+
+answerRoofNails+
+answerTrim;
+		  
+		      var results = Math.round(subtotal * 100) / 100;
 	  
 	  document.getElementById("results").innerHTML = results;
   }
