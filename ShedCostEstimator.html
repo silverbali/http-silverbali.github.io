@@ -180,7 +180,7 @@ var length = document.getElementById("length").value;
 	  var costTile = 1;
 	  
 	  var areaFloor = length * width;
-	  var answerFloor = areaFloor * costTile;
+	  var answerFloor = Math.round(areaFloor * costTile * 100) / 100;
 	  
 //	  document.getElementById("answerFloor").innerHTML = answerFloor;
 		  
@@ -191,11 +191,11 @@ var length = document.getElementById("length").value;
 		  
 		  var costAdhesive = 25;
 		  
-		  var answerAdhesive = gallonsAdhesive * costAdhesive;
+		  var answerAdhesive = Math.round(gallonsAdhesive * costAdhesive * 100) / 100;
 		  
 //		  document.getElementById("answerAdhesive").innerHTML = answerAdhesive;
 		  
-	/*  
+	  
 	  
 	  
 	  // wall left
@@ -204,12 +204,12 @@ var length = document.getElementById("length").value;
     var studSpace = document.getElementById("stud").value;
     var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3;
     var studCost = 9.97;
-    var answerStud = studCost * numberStuds;
+    var answerStud = Math.round(studCost * numberStuds * 100) / 100;
     
  //   document.getElementById("answerStud").innerHTML = answerStud;
 	  
 	  // siding
-	  
+/*	  
 	  var height = 8;
 	  areaSiding =  length * height;
 	  
