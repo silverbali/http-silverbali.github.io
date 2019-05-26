@@ -139,7 +139,7 @@
 	
 	function f1(){
 
-  if (document.getElementById('fourInch').checked && document.getElementById('gable').checked) {
+  if document.getElementById('fourInch').checked {
     
     //foundation
     var length = document.getElementById("length").value;
@@ -416,6 +416,8 @@
 		  
 		  var subtotal = answerCement + answerFloor + answerAdhesive + answerStud + answerSiding + answerWindow + answerTies + answerNailsLength + answerStud + answerSiding + answerTies + answerNailsLength + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerTruss + answerFelt + answerBoxes + answerRoofNails + answerTrim;
 		  var results = subtotal;
+	  
+	  document.getElementById("results").innerHTML = results;
   }
   
   
