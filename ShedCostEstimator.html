@@ -201,8 +201,8 @@ var length = document.getElementById("length").value;
 	  // wall left
 	  // studs
 	  
-    var studSpace = document.getElementById("stud").value;
-    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3;
+    var studSpace = 16;
+    var numberStuds = Math.round(document.getElementById("length").value * 12 / studSpace) + 3;
     var studCost = 9.97;
     var answerStud = Math.round(studCost * numberStuds * 100) / 100;
     
