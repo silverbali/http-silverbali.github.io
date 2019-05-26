@@ -163,14 +163,14 @@ var length = document.getElementById("length").value;
     var bagWeight = 80;
     
     var volumeFt3 = parseFloat(depthCement*length*width) / 12;
-		   	var bagCoverage = parseFloat(bagWeight) / 20 * .15;
+		   	var bagCoverage = parseFloat(bagWeight) / 20 * 0.15;
 		   	var numberBags = parseFloat(volumeFt3/bagCoverage + 1);
     
     var costBag = 3.12;
     
     var answerCement = Math.round(Math.round(numberBags) * costBag * 1.10 * 100) / 100;
     
-document.getElementById("answerCement").innerHTML = answerCement;
+//document.getElementById("answerCement").innerHTML = answerCement;
     
 /*	  //flooring 
     
