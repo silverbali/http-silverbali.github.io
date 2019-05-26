@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <link href="https://fonts.googleapis.com/css?family=Niconne" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Asul" rel="stylesheet"> 
+    
+    
+    <title>ShedForm</title>  
+    
+    <style>
+      
+      body{background-color: gray; margin:10px; padding:10px; }
+      
+      
+      header{ width:1000px; height:auto; text-align: center; font-size: large;font-family: cursive; background-color:green; }
+      
+      
+      #page{border-color:green ;border-style: groove ;
+      background-image:url(https://images.freeimages.com/images/large-previews/bbe/alberta-prairies-1376278.jpg);
+      width: auto; margin: 50px; padding: 20px; overflow: auto;height: 800px }
+      
+      #TypeOfFoundation{  border-color: blue; border:groove; width:500px;height:auto;background-color:white;padding: 10px }
+      #TypeofRoof{  border: solid; border-color:black; width:500px; height:auto;background-color: white;padding: 10px }
+      #Results{ border: solid;border-color:blue; width:500px;height:auto; width:500px; height:auto;text-align: center;background-color:white;}
+      #Length{ border: solid;border-color:blue; width:500px;height:auto; width:500px; height:auto;overflow: auto;background-color:white;padding: 10px }
+      #button{ margin:auto; padding: 10px; }
+        
+    </style>
+    
+</head>
+<body>
+  
+   <div id=page>
+      <header><h1> Dimensions Calculator</header>
+  
+        
+        <form action="https://threesuns.org/examples/echo" method="post">
+        
+        
+        <div id="TypeOfFoundation">
+        
+        <table>
+        
+        <tr>
+  <td>Type of Foundation</td>
+		<td>
+			<label><input type="radio" name="Skid on Gravel" value="Skid on Gravel">Skid on Gravel</label><br>
+			<label><input type="radio" name="Piers" value="Piers">Piers</label><br>
+			<label><input type="radio" name="4 inch. Slab" value="4 inch. Slab">4 inch. Slab</label><br>
+			<label><input type="radio" name="6 inch. Slab" value="6 inch. Slab">6 inch. Slab</label>
+			
+		</td>
+  <tr>
+        </table>
+        
+        
+        
+        </div>
+            <br>
+            
+            <div id="Length">
+             <tr>
+ <td id=Name>length</td>
+		<td><input type="text" name="length" size="40" maxlength="10" placeholder="length"></td>
+</tr>
+<br>
+<tr>
+  <td>width</td>
+		<td><input type="text" name="width" size="40" maxlength="10" placeholder="width"></td>
+   
+</tr>
+<br>
+<tr>
+  <td>height-top</td>
+		<td><input type="text" name="top" size="40" maxlength="10" placeholder=" At roof bottom"></td>
+   
+</tr>
+      <br>
+<tr>
+  <td>height-bottom:</td>
+		<td><input type="text" name="bottom" size="40" maxlength="10" placeholder="At roof top"></td>
+   
+</tr> 
+            </div>
+        
+        <br>
+        <br>
+        
+        <div id="TypeofRoof">
+        
+        <td>Type of Roof</td>
+        <br>
+		<td>
+			<label><input type="radio" name="Flat" value="flat">Flat</label><br>
+			<label><input type="radio" name="Hip" value="hip">Hip</label><br>
+			<label><input type="radio" name="Pitched" value="pitched">Pitched</label><br>
+			<label><input type="radio" name="Gable" value="gable">Gable</label>
+			
+		</td>
+  <tr>
+        </table>
+        
+        
+        
+        
+        </div>
+          <br>
+        
+        
+        <div id="button">
+       <table>
+       
+        <tr>
+  <td></td>
+		<td><input type="submit" value="submit"><input type="reset" value="Clear"></td>
+</tr>
+        </table>
+        
+        
+        </div>
+        </form>
+        
+        <br>
+        <div id="Results"><h2>Results</h2></div>
+
+
+</body>
+</html>
