@@ -139,11 +139,13 @@
 	
 	function f1(){
 
-  if (1>0) {
+  if (document.getElementById('fourInch').checked && document.getElementById('gable').checked) {
 	  var results = 1
 	  
 	  document.getElementById("results").innerHTML = results;
   }
+		else {
+			break;
 	}
 	
 	</script>
