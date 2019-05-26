@@ -444,8 +444,10 @@ answerBoxes+
 answerRoofNails+
 answerTrim;
 		  
-		      var results = Math.round(subtotal * 100) / 100;
-	  var results = Math.round(results * 1.15 * (1 + taxRate));
+		      var roundedSubtotal = Math.round(subtotal * 100) / 100;
+	  
+	  
+	  var results = Math.round(roundedSubtotal * 1.15 * (1 + taxRate));
 	  
 	  document.getElementById("results").innerHTML = results;
   }
