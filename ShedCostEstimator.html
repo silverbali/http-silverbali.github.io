@@ -358,6 +358,10 @@ var length = document.getElementById("length").value;
 		  var answerNailsFront = poundNailsFront * costNails;
 		  
 //		  document.getElementById("answerNails").innerHTML = answerNailsWidth;
+	  
+	  // Door
+	  
+	  var door = 150;
 		  
 		  
 		  
@@ -447,7 +451,7 @@ answerTrim;
 		      var roundedSubtotal = Math.round(subtotal * 100) / 100;
 	  var taxRate = parseFloat(taxRate);
 	  
-	  var results = Math.round(roundedSubtotal * 1.15 * (1 + taxRate));
+	  var results = Math.round(roundedSubtotal * 1.15 * (1 + taxRate) * 100) / 100;
 	  
 	  document.getElementById("results").innerHTML = results;
   }
