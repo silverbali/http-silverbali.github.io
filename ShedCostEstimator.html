@@ -52,10 +52,10 @@
         <tr>
   <td>Type of Foundation</td>
 		<td>
-			<label><input type="radio" name="foundation" value="Skid on Gravel">Skid on Gravel</label><br>
-			<label><input type="radio" name="foundation" value="Piers">Piers</label><br>
-			<label><input type="radio" name="foundation" value="fourInch">4 inch. Slab</label><br>
-			<label><input type="radio" name="foundation" value="sixInch">6 inch. Slab</label>
+			<label><input type="radio" name="foundation" id = "skid" value="Skid on Gravel">Skid on Gravel</label><br>
+			<label><input type="radio" name="foundation" id = "piers" value="Piers">Piers</label><br>
+			<label><input type="radio" name="foundation" id = "fourInch" value="fourInch">4 inch. Slab</label><br>
+			<label><input type="radio" name="foundation" id = "sixInch" value="sixInch">6 inch. Slab</label>
 			
 		</td>
   <tr>
@@ -99,10 +99,10 @@
         <td>Type of Roof</td>
         <br>
 		<td>
-			<label><input type="radio" name="roof" value="flat">Flat</label><br>
-			<label><input type="radio" name="roof" value="hip">Hip</label><br>
-			<label><input type="radio" name="roof" value="pitched">Pitched</label><br>
-			<label><input type="radio" name="roof" value="gable">Gable</label>
+			<label><input type="radio" name="roof" id = "flat" value="flat">Flat</label><br>
+			<label><input type="radio" name="roof" id = "hip" value="hip">Hip</label><br>
+			<label><input type="radio" name="roof" id = "pitched" value="pitched">Pitched</label><br>
+			<label><input type="radio" name="roof" id = "gable" value="gable">Gable</label>
 			
 		</td>
   <tr>
@@ -141,8 +141,20 @@
 <script type = "text/javascript">
 	
 	function f1(){
-
-  if (document.getElementById('fourInch').checked !== null) {
+		
+		var flat = document.getElementById("flat");
+var hip = document.getElementById("hip");
+var gable = document.getElementById("gable");
+var pitched = document.getElementById("pitched");
+		
+		var skid = document.getElementById("skid");
+var piers = document.getElementById("piers");
+var fourInch = document.getElementById("fourInch");
+var sixInch = document.getElementById("sixInch");
+		
+		
+		
+  if (gable.checked) {
 	  var results = 2
 	  
 	  document.getElementById("results").innerHTML = results;
