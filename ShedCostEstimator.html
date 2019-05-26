@@ -242,7 +242,7 @@ var length = document.getElementById("length").value;
 		  
 		  // nails includes wall only using approx cost of stainless nails per pound
 		  
-/*		  var poundNails = length *.5;
+		  var poundNails = length *.5;
 		  var costNails = 4.8;
 		  
 		  var answerNailsLength = poundNails * costNails;
@@ -252,7 +252,7 @@ var length = document.getElementById("length").value;
 
 	  // wall right
 		  
-    var studSpace = document.getElementById("stud").value;
+ /*   var studSpace = document.getElementById("stud").value;
     var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3;
     var studCost = 9.97;
     var answerStud = studCost * numberStuds;
@@ -262,12 +262,12 @@ var length = document.getElementById("length").value;
 	  // siding
 	  
 	  var height = 8;
-	  areaSiding =  length * height;
+	  var areaSiding =  length * height;
 	  
 	  
-	  coverage = 32;
-	  sidingTiles = areaSiding/32;
-	  costSiding = 25.48;
+	  var coverage = 32;
+	  var sidingTiles = areaSiding/32;
+	  var costSiding = 25.48;
 	  
 	  var answerSiding = sidingTiles * costSiding;
 	  
@@ -429,7 +429,7 @@ var length = document.getElementById("length").value;
 		  
 	*/	  
 		  
-		  var subtotal = answerCement + answerFloor + answerAdhesive + answerStud + answerSiding + answerWindow + answerTies ; //+ answerNailsLength + answerStud + answerSiding + answerTies + answerNailsLength + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerTruss + answerFelt + answerBoxes + answerRoofNails + answerTrim; -->
+		  var subtotal = answerCement + answerFloor + answerAdhesive + answerStud + answerSiding + answerWindow + answerTies + answerNailsLength ; //+ answerStud + answerSiding + answerTies + answerNailsLength + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerTruss + answerFelt + answerBoxes + answerRoofNails + answerTrim; -->
 		  var results = Math.round(subtotal * 100) / 100;
 	  
 	  document.getElementById("results").innerHTML = results;
