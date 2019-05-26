@@ -224,7 +224,7 @@ var length = document.getElementById("length").value;
 	  
 	  // windows includes structural additions, trim, and materials
 		  
-/*		  var windows = document.getElementById("windows").value;
+		  var windows = document.getElementById("windows").value;
 		  var windowCost = 40.00;
 		  var answerWindow = Math.round(((windows * windowCost) + (40 * windows)) * 100) / 100;
 		  
@@ -429,8 +429,8 @@ var length = document.getElementById("length").value;
 		  
 	*/	  
 		  
-		  var subtotal = answerCement + answerFloor + answerAdhesive + answerStud + answerSiding ; //+ answerWindow + answerTies + answerNailsLength + answerStud + answerSiding + answerTies + answerNailsLength + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerTruss + answerFelt + answerBoxes + answerRoofNails + answerTrim; -->
-		  var results = subtotal;
+		  var subtotal = answerCement + answerFloor + answerAdhesive + answerStud + answerSiding + answerWindow ; //+ answerTies + answerNailsLength + answerStud + answerSiding + answerTies + answerNailsLength + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerTruss + answerFelt + answerBoxes + answerRoofNails + answerTrim; -->
+		  var results = Math.round(subtotal * 100) / 100;
 	  
 	  document.getElementById("results").innerHTML = results;
   }
