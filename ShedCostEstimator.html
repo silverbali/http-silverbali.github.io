@@ -211,14 +211,14 @@ var length = document.getElementById("length").value;
 	  // siding
 	  
 	  var height = 8;
-	  areaSiding =  length * height;
+	  var areaSiding =  length * height;
 	  
 	  
-	  coverage = 32;
-	  sidingTiles = areaSiding/32;
-	  costSiding = 25.48;
+	  var coverage = 32;
+	  var sidingTiles = areaSiding/32;
+	  var costSiding = 25.48;
 	  
-	  var answerSiding = sidingTiles * costSiding;
+	  var answerSiding = Math.round(sidingTiles * costSiding * 100) / 100;
 	  
 //	  document.getElementById("answerSiding").innerHTML = answerSiding;
 	  
