@@ -252,7 +252,7 @@ var length = document.getElementById("length").value;
 
 	  // wall right
 		  
- /*   var studSpace = document.getElementById("stud").value;
+   var studSpace = document.getElementById("stud").value;
     var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3;
     var studCost = 9.97;
     var answerStud = studCost * numberStuds;
@@ -272,7 +272,7 @@ var length = document.getElementById("length").value;
 	  var answerSiding = sidingTiles * costSiding;
 	  
 //	  document.getElementById("answerSiding").innerHTML = answerSiding;
-		  var numberTies = numberStuds - 1;
+ /*		  var numberTies = numberStuds - 1;
 		  
 		  var tiesCost = 2.50;
 		  
@@ -429,7 +429,7 @@ var length = document.getElementById("length").value;
 		  
 	*/	  
 		  
-		  var subtotal = answerCement + answerFloor + answerAdhesive + answerStud + answerSiding + answerWindow + answerTies + answerNailsLength ; //+ answerStud + answerSiding + answerTies + answerNailsLength + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerTruss + answerFelt + answerBoxes + answerRoofNails + answerTrim; -->
+		  var subtotal = answerCement + answerFloor + answerAdhesive + answerStud + answerSiding + answerWindow + answerTies + answerNailsLength + answerStud + answerSiding ; //+ answerTies + answerNailsLength + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerTruss + answerFelt + answerBoxes + answerRoofNails + answerTrim; -->
 		  var results = Math.round(subtotal * 100) / 100;
 	  
 	  document.getElementById("results").innerHTML = results;
