@@ -118,6 +118,8 @@
        
         <tr>
   <td></td>
+		<button onclick = "f1()">Estimate</button>
+		
 		<td><input type="submit" value="submit"><input type="reset" value="Clear"></td>
 </tr>
         </table>
@@ -127,13 +129,15 @@
         </form>
         
         <br>
-        <div id="Results"><h2>Results</h2></div>
+        <div id="results"><h2>Results</h2></div>
 
 
 </body>
 
 
 <script type = "text/javascript">
+	
+	function f1(){
 
   if (document.getElementById('fourInch').checked && document.getElementById('gable').checked) {
     
@@ -153,9 +157,7 @@
     
     document.getElementById("answerCement").innerHTML = answerCement;
     
-	  function f1() {
-	  
-    	  //flooring
+	  //flooring
     
 	  var length = document.getElementById("length").value;
 	  var width = document.getElementById("width").value;
@@ -172,9 +174,9 @@
 		  
 		  var gallonsAdhesive = areaFloor / 45;
 		  
-		  var costAdhesive = 25
+		  var costAdhesive = 25;
 		  
-		  war answerAdhesive = gallonsAdhesive * costAdhesive;
+		  var answerAdhesive = gallonsAdhesive * costAdhesive;
 		  
 		  document.getElementById("answerAdhesive").innerHTML = answerAdhesive;
 		  
@@ -184,22 +186,22 @@
 	  // wall left
 	  // studs
 	  
-    var studSpace = document.getElementById("stud").value
-    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3
-    var studCost = 9.97
-    var answerStud = studCost * numberStuds
+    var studSpace = document.getElementById("stud").value;
+    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3;
+    var studCost = 9.97;
+    var answerStud = studCost * numberStuds;
     
-    document.getElementById("answerStud").innerHTML = answerStud
+    document.getElementById("answerStud").innerHTML = answerStud;
 	  
 	  // siding
 	  
-	  var height = 8
+	  var height = 8;
 	  areaSiding =  length * height;
 	  
 	  
-	  coverage = 32
-	  sidingTiles = areaSiding/32
-	  costSiding = 25.48
+	  coverage = 32;
+	  sidingTiles = areaSiding/32;
+	  costSiding = 25.48;
 	  
 	  var answerSiding = sidingTiles * costSiding;
 	  
@@ -225,32 +227,32 @@
 		  
 		  // nails includes wall only using approx cost of stainless nails per pound
 		  
-		  var poundNails = length *.5
-		  var costNails = 4.8
+		  var poundNails = length *.5;
+		  var costNails = 4.8;
 		  
-		  var answerNails = poundNails * costNails
+		  var answerNailsLength = poundNails * costNails;
 		  
-		  document.getElementById("answerNails").innerHTML = answerNails;
+		  document.getElementById("answerNails").innerHTML = answerNailsLength;
 		  
 
 	  // wall right
 		  
-    var studSpace = document.getElementById("stud").value
-    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3
-    var studCost = 9.97
-    var answerStud = studCost * numberStuds
+    var studSpace = document.getElementById("stud").value;
+    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3;
+    var studCost = 9.97;
+    var answerStud = studCost * numberStuds;
     
-    document.getElementById("answerStud").innerHTML = answerStud
+    document.getElementById("answerStud").innerHTML = answerStud;
 	  
 	  // siding
 	  
-	  var height = 8
+	  var height = 8;
 	  areaSiding =  length * height;
 	  
 	  
-	  coverage = 32
-	  sidingTiles = areaSiding/32
-	  costSiding = 25.48
+	  coverage = 32;
+	  sidingTiles = areaSiding/32;
+	  costSiding = 25.48;
 	  
 	  var answerSiding = sidingTiles * costSiding;
 	  
@@ -265,31 +267,31 @@
 		  
 		  // nails includes wall only using approx cost of stainless nails per pound
 		  
-		  var poundNails = length *.5
-		  var costNails = 4.8
+		  var poundNails = length *.5;
+		  var costNails = 4.8;
 		  
-		  var answerNails = poundNails * costNails
+		  var answerNailsLength = poundNails * costNails;
 		  
-		  document.getElementById("answerNails").innerHTML = answerNails;
+		  document.getElementById("answerNails").innerHTML = answerNailsLength;
 		  
 		  	  // wall Rear
 		  
-    var studSpace = document.getElementById("stud").value
-    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3
-    var studCost = 9.97
-    var answerStud = studCost * numberStuds
+    var studSpace = document.getElementById("stud").value;
+    var numberStuds = Math.round(document.getElementById("width").value * 12 / 16) + 3;
+    var studCost = 9.97;
+    var answerStudWidth = studCost * numberStuds;
     
-    document.getElementById("answerStud").innerHTML = answerStud
+    document.getElementById("answerStudWidth").innerHTML = answerStudWidth;
 	  
 	  // siding
 	  
-	  var height = 8
+	  var height = 8;
 	  areaSiding =  length * height;
 	  
 	  
-	  coverage = 32
-	  sidingTiles = areaSiding/32
-	  costSiding = 25.48
+	  coverage = 32;
+	  sidingTiles = areaSiding/32;
+	  costSiding = 25.48;
 	  
 	  var answerSiding = sidingTiles * costSiding;
 	  
@@ -304,32 +306,32 @@
 		  
 		  // nails includes wall only using approx cost of stainless nails per pound
 		  
-		  var poundNails = width *.5
-		  var costNails = 4.8
+		  var poundNails = width *.5;
+		  var costNails = 4.8;
 		  
-		  var answerNails = poundNails * costNails
+		  var answerNailsWidth = poundNails * costNails;
 		  
-		  document.getElementById("answerNails").innerHTML = answerNails;
+		  document.getElementById("answerNails").innerHTML = answerNailsWidth;
 		  
 		  
 		  		  	  // wall Front
 		  
-    var studSpace = document.getElementById("stud").value
-    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3
-    var studCost = 9.97
-    var answerStud = studCost * numberStuds
+    var studSpace = document.getElementById("stud").value;
+    var numberStuds = Math.round(document.getElementById("length").value * 12 / 16) + 3;
+    var studCost = 9.97;
+    var answerStudWidth = studCost * numberStuds;
     
-    document.getElementById("answerStud").innerHTML = answerStud
+    document.getElementById("answerStudWidth").innerHTML = answerStudWidth;
 	  
 	  // siding
 	  
-	  var height = 8
+	  var height = 8;
 	  areaSiding =  length * height;
 	  
 	  
-	  coverage = 32
-	  sidingTiles = areaSiding/32
-	  costSiding = 25.48
+	  coverage = 32;
+	  sidingTiles = areaSiding/32;
+	  costSiding = 25.48;
 	  
 	  var answerSiding = sidingTiles * costSiding;
 	  
@@ -344,19 +346,19 @@
 		  
 		  // nails includes wall only using approx cost of stainless nails per pound
 		  
-		  var poundNails = width *.5
-		  var costNails = 4.8
+		  var poundNails = width *.5;
+		  var costNails = 4.8;
 		  
-		  var answerNails = poundNails * costNails
+		  var answerNailsWidth = poundNails * costNails;
 		  
-		  document.getElementById("answerNails").innerHTML = answerNails;
+		  document.getElementById("answerNails").innerHTML = answerNailsWidth;
 		  
 		  
 		  
 		  // Roof
 		  // trusses
 		  
-		  var trusses = numberStuds - 1
+		  var trusses = numberStuds - 1;
 		  // 60 dollars per 10 ft
 		  var trussCostPerFt = 60 / 10;
 		  
@@ -376,11 +378,11 @@
 		  
 		  // 124 boxes / 10000 sqft floor space with medium pitch
 		  
-		  var boxesPerArea = 124/10000
+		  var boxesPerArea = 124/10000;
 		  
-		  var boxesTotal = Math.ceil(length*width*boxesPerArea)
+		  var boxesTotal = Math.ceil(length*width*boxesPerArea);
 		  
-		  var boxesCost = 30
+		  var boxesCost = 30;
 		  
 		  var answerBoxes = boxesCost * boxesTotal;
 		  
@@ -410,8 +412,10 @@
 		  
 		  // total plus wastage and tax
 		  
-		  var taxRate = document.getElementById("taxRate").value;    
-    
+		  var taxRate = document.getElementById("taxRate").value;
+		  
+		  var subtotal = answerCement + answerFloor + answerAdhesive + answerStud + answerSiding + answerWindow + answerTies + answerNailsLength + answerStud + answerSiding + answerTies + answerNailsLength + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerTruss + answerFelt + answerBoxes + answerRoofNails + answerTrim;
+		  var results = subtotal;
   }
   
   
