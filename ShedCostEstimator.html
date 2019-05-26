@@ -224,15 +224,15 @@ var length = document.getElementById("length").value;
 	  
 	  // windows includes structural additions, trim, and materials
 		  
-/*		  var windows = document.getElementById("windows").value;
-		  var windowsCost = 40.00;
-		  var answerWindow = (windows * windowCost) + (40 * windows);
+		  var windows = document.getElementById("windows").value;
+		  var windowCost = 40.00;
+		  var answerWindow = Math.round(((windows * windowCost) + (40 * windows)) * 100) / 100;
 		  
 //		  document.getElementById("answerWindow").innerHTML = answerWindow;
 		  
 	  //  hurricane ties
 		  
-		  var numberTies = numberStuds - 1;
+/*		  var numberTies = numberStuds - 1;
 		  
 		  var tiesCost = 2.50;
 		  
