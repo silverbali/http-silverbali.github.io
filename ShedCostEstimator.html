@@ -168,9 +168,9 @@ var length = document.getElementById("length").value;
     
     var costBag = 3.12;
     
-    var answerCement = 4; //Math.round(Math.round(numberBags) * costBag * 1.10 * 100) / 100;
+    var answerCement = Math.round(Math.round(numberBags) * costBag * 1.10 * 100) / 100;
     
-//    document.getElementById("answerCement").innerHTML = answerCement;
+document.getElementById("answerCement").innerHTML = answerCement;
     
 /*	  //flooring 
     
@@ -429,7 +429,7 @@ var length = document.getElementById("length").value;
 		  
 		  
 		  
-		  var subtotal = 5;//answerCement; // + answerFloor + answerAdhesive + answerStud + answerSiding + answerWindow + answerTies + answerNailsLength + answerStud + answerSiding + answerTies + answerNailsLength + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerTruss + answerFelt + answerBoxes + answerRoofNails + answerTrim; -->
+		  var subtotal = answerCement; // + answerFloor + answerAdhesive + answerStud + answerSiding + answerWindow + answerTies + answerNailsLength + answerStud + answerSiding + answerTies + answerNailsLength + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerStudWidth + answerSiding + answerTies + answerNailsWidth + answerTruss + answerFelt + answerBoxes + answerRoofNails + answerTrim; -->
 		  var results = subtotal;
 	  
 	  document.getElementById("results").innerHTML = results;
