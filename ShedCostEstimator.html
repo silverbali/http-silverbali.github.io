@@ -460,6 +460,297 @@ answerTrim;
 	  document.getElementById("results").innerHTML = results;
   }
    
+		
+		else if (gable.checked && sixInch.checked) {
+	  
+    //foundation
+    
+    var depthCement = 4;
+    var bagWeight = 80;
+    
+    var volumeFt3 = parseFloat(depthCement*length*width) / 12;
+		   	var bagCoverage = parseFloat(bagWeight) / 20 * 0.15;
+		   	var numberBags = parseFloat(volumeFt3/bagCoverage + 1);
+    
+    var costBag = 3.12;
+    
+    var answerCement = Math.round(numberBags * costBag * 1.10 * 100) / 100;
+    
+//document.getElementById("answerCement").innerHTML = answerCement;
+    
+  //flooring 
+    
+	  var length = document.getElementById("length").value;
+	  var width = document.getElementById("width").value;
+	  
+	  var costTile = 1;
+	  
+	  var areaFloor = length * width;
+	  var answerFloor = Math.round(areaFloor * costTile * 100) / 100;
+	  
+//	  document.getElementById("answerFloor").innerHTML = answerFloor;
+		  
+		  // flooring adhesive
+		 
+		  
+		  var gallonsAdhesive = areaFloor / 45;
+		  
+		  var costAdhesive = 25;
+		  
+		  var answerAdhesive = Math.round(gallonsAdhesive * costAdhesive * 100) / 100; 
+		  
+//		  document.getElementById("answerAdhesive").innerHTML = answerAdhesive;
+		  
+	  
+	  
+	  
+	  // wall left
+	  // studs
+	  
+    var studSpaceLeft = 16;
+    var numberStudsLeft = Math.round(document.getElementById("length").value * 12 / studSpaceLeft) + 3;
+    var studCost = 9.97;
+    var answerStudsLeft = Math.round(studCost * numberStudsLeft * 100) / 100;
+    
+ //   document.getElementById("answerStud").innerHTML = answerStud;
+	  
+	  // siding
+	  
+	  var height = 8;
+	  var areaSiding =  length * height;
+	  
+	  
+	  var coverage = 32;
+	  var sidingTiles = areaSiding/32;
+	  var costSiding = 25.48;
+	  
+	  var answerSidingLeft = Math.round(sidingTiles * costSiding * 100) / 100;
+	  
+//	  document.getElementById("answerSiding").innerHTML = answerSiding;
+	  
+	  // windows includes structural additions, trim, and materials
+		  
+		  var windows = 1;
+		  var windowCost = 40.00;
+		  var answerWindow = Math.round(((windows * windowCost) + (40 * windows)) * 100) / 100;
+		  
+//		  document.getElementById("answerWindow").innerHTML = answerWindow;
+		  
+	  //  hurricane ties
+		  
+		  var numberTies = numberStudsLeft - 1;
+		  
+		  var tiesCost = 2.50;
+		  
+		  var answerTiesLeft = numberTies * tiesCost;
+		  
+//		  document.getElementById("answerTies").innerHTML = answerTies;
+		  
+		  // nails includes wall only using approx cost of stainless nails per pound
+		  
+		  var poundNailsLeft = length * 0.5;
+		  var costNails = 4.8;
+		  
+		  var answerNailsLeft = poundNailsLeft * costNails;
+		  
+//		  document.getElementById("answerNails").innerHTML = answerNailsLength;
+		  
+	  // wall right
+		  
+   var studSpaceRight = 16;
+    var numberStudsRight = Math.round(document.getElementById("length").value * 12 / 16) + 3;
+    var answerStudsRight = studCost * numberStudsRight;
+    
+//    document.getElementById("answerStud").innerHTML = answerStud;
+	  
+	  // siding
+	  
+	  var height = 8;
+	  var areaSiding =  length * height;
+	  
+	  
+	  var coverage = 32;
+	  var sidingTiles = areaSiding/32;
+	  
+	  var answerSidingRight = sidingTiles * costSiding;
+	  
+//	  document.getElementById("answerSiding").innerHTML = answerSiding;
+	  var numberTiesRight = numberStudsRight - 1;
+		  
+		  var answerTiesRight = numberTiesRight * tiesCost;
+		  
+//		  document.getElementById("answerTies").innerHTML = answerTies;
+		  
+		  // nails includes wall only using approx cost of stainless nails per pound
+		  
+		  var poundNails = length * 0.5;
+		  var costNails = 4.8;
+		  
+		  var answerNailsRight = poundNails * costNails;
+		  
+//		  document.getElementById("answerNails").innerHTML = answerNailsLength;
+		  
+		  	  // wall Rear
+		  
+    var studSpaceRear = 16;
+    var numberStudsRear = Math.round(document.getElementById("width").value * 12 / 16) + 3;
+    var answerStudRear = studCost * numberStudsRear;
+    
+//    document.getElementById("answerStudWidth").innerHTML = answerStudWidth;
+	  
+	  // siding
+	  
+	  var height = 8;
+	  var areaSiding =  length * height;
+	  
+	  
+	  var coverage = 32;
+	  var sidingTiles = areaSiding/32;
+	  
+	  var answerSidingRear = sidingTiles * costSiding;
+	  
+//	  document.getElementById("answerSiding").innerHTML = answerSiding;
+		  
+		  // nails includes wall only using approx cost of stainless nails per pound
+		  
+		  var poundNailsRear = width *.5;
+		  var costNails = 4.8;
+		  
+		  var answerNailsRear = poundNailsRear * costNails;
+		  
+//		  document.getElementById("answerNails").innerHTML = answerNailsWidth;
+		  
+		  
+		  		  	  // wall Front
+		  
+    var studSpaceFront = 16;
+    var numberStudsFront = Math.round(document.getElementById("width").value * 12 / 16) + 3;
+    var answerStudFront = studCost * numberStudsFront;
+    
+ //   document.getElementById("answerStudWidth").innerHTML = answerStudWidth;
+	  
+	  // siding
+	  
+	  var height = 8;
+	  var areaSiding =  length * height;
+	  
+	  
+	  var coverage = 32;
+	  var sidingTiles = areaSiding/32;
+	  
+	  var answerSidingFront = sidingTiles * costSiding;
+	  
+	  
+//	  document.getElementById("answerSiding").innerHTML = answerSiding;
+		 
+		  
+		  // nails includes wall only using approx cost of stainless nails per pound
+		  
+		  var poundNailsFront = width * 0.5;
+		  
+		  var answerNailsFront = poundNailsFront * costNails;
+		  
+//		  document.getElementById("answerNails").innerHTML = answerNailsWidth;
+	  
+	  // Door
+	  
+	  var door = 150;
+	  var answerDoor = door;
+		  
+		  
+		  
+		  // Roof
+		  // trusses
+		  
+		  var trusses = numberStudsLeft - 1;
+		  // 60 dollars per 10 ft
+		  var trussCostPerFt = 60 / 10;
+		  
+		  var answerTruss = trusses * trussCostPerFt;
+		  
+//		  document.getElementById("answerTruss").innerHTML = answerTruss;
+		  
+		  // felt
+		  // most smaller structures will only use 1 roll of roofing felt, priced for 2
+		  var feltCost = 140;
+		  
+		  var answerFelt = feltCost;
+		  
+//		  document.getElementById("answerFelt").innerHTML = answerFelt;
+		  
+		  // Shingles rounded up per box
+		  
+		  // 124 boxes / 10000 sqft floor space with medium pitch
+		  
+		  var boxesPerArea = 124/10000;
+		  
+		  var boxesTotal = Math.ceil(length*width*boxesPerArea);
+		  
+		  var boxesCost = 30;
+		  
+		  var answerBoxes = boxesCost * boxesTotal;
+		  
+//		  document.getElementById("answerBoxes").innerHTML = answerBoxes;
+		  
+		  // roofing nails
+		  
+		  var poundsPerArea = 20 / 100;
+		  
+		  var roofNailsTotal = areaFloor * poundsPerArea;
+		  
+		  var roofNailsCost = 2.25;
+		  
+		  var answerRoofNails = roofNailsTotal * roofNailsCost;
+		  
+//		  document.getElementById("answerRoofNails").innerHTML = answerRoofNails;
+		  
+		  // trim and vents and gutters etc.
+		  
+		  var perimeter = 2 * length + 2 * width;
+		  // trim per foot plus 1 vent every 8 ft of trim
+		  var costPerFoot = 2 + (2/8);
+		  
+		  var answerTrim = perimeter * costPerFoot;
+		  
+//		  document.getElementById("answerTrim").innerHTML = answerTrim; 
+		  
+		  // total plus wastage and tax
+		  
+		  
+		  
+		  var subtotal = answerCement+
+answerFloor+
+answerAdhesive+ 
+answerStudsLeft+
+answerSidingLeft+
+answerWindow+
+answerTiesLeft+
+answerNailsLeft+
+answerStudsRight+
+answerSidingRight+
+answerTiesRight+
+answerNailsRight+
+answerStudRear+
+answerSidingRear+
+answerNailsRear+
+answerStudFront+
+answerSidingFront+
+answerNailsFront+
+answerDoor+
+answerTruss+
+answerFelt+
+answerBoxes+
+answerRoofNails+
+answerTrim;
+		  
+		      var roundedSubtotal = Math.round(subtotal * 100) / 100;
+	  var taxRate = parseFloat(taxRate);
+	  
+	  var results = Math.round(roundedSubtotal  * (1 + taxRate) * 100) / 100;
+	  
+	  document.getElementById("results").innerHTML = results;
+  }
+		
   }
 </script>
 
