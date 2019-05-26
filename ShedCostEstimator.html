@@ -165,6 +165,8 @@ var length = document.getElementById("length").value;
     var width = document.getElementById("width").value;		
 		var width = parseFloat(width);
 		
+		var taxRate = document.getElementById("taxRate");
+		
   if (gable.checked) {
 	  
     //foundation
@@ -443,6 +445,7 @@ answerRoofNails+
 answerTrim;
 		  
 		      var results = Math.round(subtotal * 100) / 100;
+	  var results = Math.round(results * 1.15 * (1 + taxRate));
 	  
 	  document.getElementById("results").innerHTML = results;
   }
