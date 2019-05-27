@@ -60,9 +60,12 @@
         
         <tr>
   <td>Type of Foundation</td>
+		<br>
 		<td>
+			<!--
 			<label><input type="radio" name="foundation" id = "skid" value="Skid on Gravel">Skid on Gravel</label><br>
-			<label><input type="radio" name="foundation" id = "piers" value="Piers">Piers</label><br>
+			<label><input type="radio" name="foundation" id = "piers" value="Piers">Piers</label><br> 
+-->
 			<label><input type="radio" name="foundation" id = "fourInch" value="fourInch">4 inch. Slab</label><br>
 			<label><input type="radio" name="foundation" id = "sixInch" value="sixInch">6 inch. Slab</label>
 			
@@ -118,9 +121,12 @@
         <td>Type of Roof</td>
         <br>
 		<td>
+			
+			<!--
 			<label><input type="radio" name="roof" id = "flat" value="flat">Flat</label><br>
 			<label><input type="radio" name="roof" id = "hip" value="hip">Hip</label><br>
 			<label><input type="radio" name="roof" id = "pitched" value="pitched">Pitched</label><br>
+-->
 			<label><input type="radio" name="roof" id = "gable" value="gable">Gable</label>
 			
 		</td>
@@ -755,7 +761,7 @@ answerTrim;
 	  
 	  var results = Math.round(roundedSubtotal  * (1 + taxRate) * 100) / 100;
 	  
-	  document.getElementById("results").innerHTML = results;
+	  document.getElementById("results").innerHTML = "Approximately " + results + " USD.";
   }
 		
   }
