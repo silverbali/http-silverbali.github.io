@@ -145,7 +145,8 @@ background-size: 100%; background-position: center;border:10px; border-style: in
 		  <br>
 	  <button onclick = "f1()">Calculate</button> <br>
 	  
-<h1 id = "answer1"></h1></p>
+<h1 id = "answer1"></h1>
+	</p>
 
 
 
@@ -201,7 +202,8 @@ background-size: 100%; background-position: center;border:10px; border-style: in
 			
 	
 		
-			document.getElementById("answer1").innerHTML = "Volume in ft cubed " + Math.round(volumeFt3*100)/100 + " number of bags " + Math.round(numberBags) + ". Do not exceed the payload capacity of your vehicle".;
+			document.getElementById("answer1").innerHTML = "Volume in ft cubed " + Math.round(volumeFt3*100)/100 + " number of bags " + Math.round(numberBags) + 
+				". Do not exceed the payload capacity of your vehicle.";
 		
 	}
 </script>
