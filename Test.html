@@ -83,16 +83,33 @@ to help with cost of materials estimates. Please enjoy the links while this webs
     
     <h2>Estimate Cost of Materials for a Shed</h2>
 
-<p></p>
+<p>The purpose of this website is to help estimate the cost of a foundation <br>
+		  and to provide useful links for shed building and the purchase of materials.<br>  
+		  Please enjoy the links and calculators while this website is being developed.<br>
+</p>
 
 </div>
 
 
 <div id="calculator1">
 
-<h2></h2>
+<h2>Gravel Calculator</h2>
 
-<p></p>
+<p>Enter length in feet
+		  lengthGravel <input type="number" id= "lengthGravel">
+		  <br>
+		  <br>
+		  
+		  Enter width in feet
+		  widthGravel <input type="number" id= "widthGravel">
+		  <br>
+		  <br>
+		
+	 Enter depth in inches
+		  depthGravel <input type="number" id= "depthGravel">
+		  <br>
+<br>
+	</p>
 
 
 </div>
@@ -100,7 +117,7 @@ to help with cost of materials estimates. Please enjoy the links while this webs
 
 <div id="calculator2">
     
-    <h2>Supplier List</h2>
+    <h2>Cement Calculator</h2>
 
 
 <p></p>
@@ -116,6 +133,24 @@ to help with cost of materials estimates. Please enjoy the links while this webs
 
 </body>
 
+	<script type = "text/javascript">
+		function f2(){
+			
+			var lengthGravel = document.getElementById("lengthGravel").value;
+		  	var widthGravel = document.getElementById("widthGravel").value;
+		   	var depthGravel = document.getElementById("depthGravel").value;
+		   			
+			var volumeGravelFt3 = parseFloat(depthGravel*widthGravel*lengthGravel) / 12;
+		   	var volumeGravelY3 = volumeGravelFt3*0.037037;
+		   	var order = Math.round(volumeGravelY3*100)/100;
+			var weightGravel = order * 2900;
+			
+	
+		
+			document.getElementById("answer2").innerHTML = "Cubic yards of gravel " + order + ". Weight of gravel" + weightGravel + "pounds. Do not exceed the payload capacity of your vehicle!";
+		}
+		
+		</script>
 
 
 </html>
