@@ -109,6 +109,9 @@ to help with cost of materials estimates. Please enjoy the links while this webs
 		  depthGravel <input type="number" id= "depthGravel">
 		  <br>
 <br>
+	<button onclick = "f2()">Calculate</button> <br>
+	  
+<h1 id = "answer2"></h1>
 	</p>
 
 
@@ -120,7 +123,29 @@ to help with cost of materials estimates. Please enjoy the links while this webs
     <h2>Cement Calculator</h2>
 
 
-<p></p>
+<p>Enter length in feet
+		  lengthCement <input type="number" id= "lengthCement">
+		  <br>
+		  <br>
+		  
+		  Enter width in feet
+		  widthCement <input type="number" id= "widthCement">
+		  <br>
+		  <br>
+		
+	 Enter depth in inches
+		  depthCement <input type="number" id= "depthCement">
+		  <br>
+		  <br>
+		  
+		 
+		  Enter bag weight in pounds
+		  bagWeight <input type="number" id= "bagWeight">
+		  <br>
+		  <br>
+	  <button onclick = "f1()">Calculate</button> <br>
+	  
+<h1 id = "answer1"></h1></p>
 
 
 
@@ -151,6 +176,25 @@ to help with cost of materials estimates. Please enjoy the links while this webs
 		}
 		
 		</script>
+	
+	<script type = "text/javascript">
+	function f1(){
+			
+			var lengthCement = document.getElementById("lengthCement").value;
+		  	var widthCement = document.getElementById("widthCement").value;
+		   	var depthCement = document.getElementById("depthCement").value;
+		   	var bagWeight = document.getElementById("bagWeight").value;
+		
+			var volumeFt3 = parseFloat(depthCement*widthCement*lengthCement) / 12;
+		   	var bagCoverage = parseFloat(bagWeight) / 20 * .15;
+		   	var numberBags = parseFloat(volumeFt3/bagCoverage + 1);
+			
+	
+		
+			document.getElementById("answer1").innerHTML = "volume in ft cubed " + Math.round(volumeFt3*100)/100 + " number of bags " + Math.round(numberBags) + ". Do not exceed the payload capacity of your vehicle";
+		
+	}
+</script>
 
 
 </html>
